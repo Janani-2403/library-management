@@ -1,14 +1,9 @@
 import React from "react";
 import "../styles/Books.css";
-import defaultImg from "../assets/default.jpg";
-
 
 export default function BookCard({ book, onIssue, onEdit, onDelete }) {
- const coverSrc =
-  book.cover?.startsWith("http")
-    ? book.cover
-    : defaultImg;
-
+  // Use only the provided book cover
+  const coverSrc = book.cover;
 
   const isOut = book.available === 0;
 
@@ -23,7 +18,7 @@ export default function BookCard({ book, onIssue, onEdit, onDelete }) {
         <p>Author: {book.author}</p>
         <p>ISBN: {book.isbn}</p>
 
-        {/*  Show available count with color */}
+        {/* Show available count with color */}
         <p>
           Available:{" "}
           <span style={{ color: isOut ? "red" : "green", fontWeight: "bold" }}>
@@ -34,7 +29,7 @@ export default function BookCard({ book, onIssue, onEdit, onDelete }) {
       </div>
 
       <div className="book-actions">
-        {/*  Disable Issue Button if no copies */}
+        {/* Disable Issue Button if no copies */}
         <button className="btn-issue" onClick={onIssue} disabled={isOut}>
           Issue
         </button>
