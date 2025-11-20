@@ -1,11 +1,14 @@
 import React from "react";
 import "../styles/Books.css";
+import defaultImg from "../assets/default.jpg";
+
 
 export default function BookCard({ book, onIssue, onEdit, onDelete }) {
-  const coverSrc =
-    book.cover?.startsWith("http") || book.cover?.startsWith("/assets/")
-      ? book.cover
-      : "/assets/default.jpg";
+ const coverSrc =
+  book.cover?.startsWith("http")
+    ? book.cover
+    : defaultImg;
+
 
   const isOut = book.available === 0;
 
