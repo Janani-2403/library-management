@@ -1,0 +1,151 @@
+/* =====================
+   DASHBOARD PAGE STYLES
+   ===================== */
+
+/* Main container spacing */
+.container {
+  padding: 20px 25px;
+}
+
+/* Page Heading */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* =====================
+   STATS GRID
+   ===================== */
+.stats-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+.card .small {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* =====================
+   RECENT TRANSACTION TABLE
+   ===================== */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* ✅ Enables scroll on small screens */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px; /* ✅ So table doesn't squish */
+}
+
+.table thead {
+  background: #f1f3f6;
+}
+
+.table th, .table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Returned / Issued status colors (fallback styling only) */
+td[style] {
+  font-weight: 600;
+}
+
+/* =====================
+      RESPONSIVE
+   ===================== */
+
+/* >= 1280px (Large Desktop) */
+@media (min-width: 1280px) {
+  .container {
+    padding: 30px 40px;
+  }
+  .container h1 {
+    font-size: 2.4rem;
+  }
+  .card h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* 1024px - 1279px */
+@media (max-width: 1279px) {
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* 768px - Tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 18px;
+  }
+  .container h1 {
+    font-size: 1.7rem;
+  }
+  .card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 600px - Large Mobile */
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 450px - Normal Mobile */
+@media (max-width: 450px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 15px;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* <= 300px - Very Small Screen */
+@media (max-width: 300px) {
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .stats-grid {
+    gap: 10px;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+  }
+}

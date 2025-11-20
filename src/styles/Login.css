@@ -1,0 +1,129 @@
+/* ====== AUTH WRAPPER ====== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6; /* light gray */
+  padding: 16px;
+}
+
+/* ====== LOGIN BOX ====== */
+.auth-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 28px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* ====== INPUT FIELDS ====== */
+.auth-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.auth-box input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+}
+
+/* ====== BUTTON ====== */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 18px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.auth-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ====== REGISTER LINK ====== */
+.auth-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== RESPONSIVENESS ====== */
+
+/* ---- Ultra Small Phones ( < 350px ) ---- */
+@media (max-width: 350px) {
+  .auth-box {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .auth-box h2 {
+    font-size: 1.3rem;
+  }
+  .auth-box input,
+  .auth-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* ---- Small Mobiles (350px - 480px) ---- */
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 24px;
+    max-width: 95%;
+  }
+  .auth-box h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---- Tablets (768px - 1024px) ---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .auth-box {
+    max-width: 420px;
+    padding: 35px 38px;
+  }
+  .auth-box h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ---- Desktop (1280px and above) ---- */
+@media (min-width: 1280px) {
+  .auth-box {
+    max-width: 420px;
+    padding: 38px 40px;
+  }
+  .auth-box h2 {
+    font-size: 2rem;
+  }
+  .auth-box input, .auth-btn {
+    font-size: 1.05rem;
+  }
+}

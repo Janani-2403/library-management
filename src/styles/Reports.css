@@ -1,0 +1,163 @@
+/* === Page Layout === */
+.reports-page {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* === Section === */
+.report-section {
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* === Table Scroll Wrapper for Mobile === */
+.report-section {
+  overflow-x: auto;   /* Enables horizontal scroll */
+}
+
+/* === Table Styling === */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px; /* Prevents shrinking (important) */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 0.95rem;
+}
+
+.styled-table th {
+  font-weight: 600;
+  background: #f4f6f8;
+}
+
+.styled-table tr:hover {
+  background-color: #fafafa;
+}
+
+.no-data {
+  text-align: center;
+  padding: 14px;
+  font-style: italic;
+  color: #888;
+}
+
+/* === Overdue Highlight Row === */
+.overdue-row {
+  background: #ffeaea;
+  color: #b30000;
+  font-weight: 500;
+}
+
+/* === Scrollbar (minimal) === */
+.report-section::-webkit-scrollbar {
+  height: 6px;
+}
+.report-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+.report-section::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+
+/* ✅ Large screens (1200px+) */
+@media (min-width: 1200px) {
+  .page-title {
+    font-size: 2.3rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Laptops / Tablets Horizontal (768px - 1199px) */
+@media (max-width: 1199px) {
+  .reports-page {
+    padding: 1rem;
+  }
+}
+
+/* ✅ Tablets (600px - 768px) */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.7rem;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* ✅ Mobiles above 360px */
+@media (max-width: 600px) {
+  .report-section {
+    padding: 0.9rem;
+  }
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ Small Mobiles (360px - 430px) */
+@media (max-width: 430px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.15rem;
+  }
+}
+
+/* ✅ Very Small Screens (300px - 360px) */
+@media (max-width: 360px) {
+  .reports-page {
+    padding: 0.7rem;
+  }
+  .styled-table th,
+  .styled-table td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ✅ Ultra Small Screens (below 300px) */
+@media (max-width: 300px) {
+  .page-title {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+  .styled-table {
+    min-width: 450px; /* Ensures forced scroll even on tiny screens */
+  }
+}

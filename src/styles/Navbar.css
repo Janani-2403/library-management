@@ -1,0 +1,191 @@
+/* === NAVBAR BASE === */
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: #010135;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.4rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Left Section === */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Title */
+.nav-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  display: none; /* Default: hidden on large screens */
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Right Section === */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Default (above 1280px) */
+.username {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Large Tablets & Small Laptops (1025px - 1280px) */
+@media (max-width: 1280px) {
+  .username {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .username {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 768px) {
+  .username {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Phones (360px - 480px) */
+@media (max-width: 480px) {
+  .username {
+    font-size: 0.80rem;
+  }
+}
+
+/* Very Small Phones (300px - 359px) */
+@media (max-width: 360px) {
+  .username {
+    font-size: 0.72rem;
+  }
+}
+
+/* Ultra Small Screens (Below 300px) — hide to avoid overflow */
+@media (max-width: 300px) {
+  .username {
+    display: none;
+  }
+}
+
+
+/* Buttons & Links */
+.login-link,
+.register-link,
+.logout-btn {
+  background: #ffffff;
+  color: #2f855a;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover,
+.login-link:hover,
+.register-link:hover {
+  background: #dff3e8;
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+
+/* ✅ Mobile Sidebar Button Visible */
+@media (max-width: 1025px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* ✅ Tablets / Small Laptops */
+@media (max-width: 768px) {
+  .nav-title {
+    font-size: 1.1rem;
+  }
+
+  .username {
+    display: none; /* hide username if tight space */
+  }
+}
+
+/* ✅ Small Phones (360px - 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .nav-right {
+    gap: 0.6rem;
+  }
+
+  .login-link,
+  .register-link,
+  .logout-btn {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ✅ Very Small Phones (300px - 360px) */
+@media (max-width: 360px) {
+  .nav-title {
+    font-size: 1rem;
+  }
+
+  .login-link,
+  .register-link,
+  .logout-btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+  }
+}
+
+/* ✅ Ultra Small Screens (< 300px) */
+@media (max-width: 300px) {
+  .nav-title {
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    gap: 0.35rem;
+  }
+
+  .login-link,
+  .register-link,
+  .logout-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+  
+}

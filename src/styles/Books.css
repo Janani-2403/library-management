@@ -1,0 +1,221 @@
+/* ===============================
+   MAIN PAGE LAYOUT
+   =============================== */
+.books-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   ADD BOOK FORM
+   =============================== */
+.add-book-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.add-book-form input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.add-book-form button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.add-book-form button:hover {
+  background: #4f46e5;
+}
+
+/* ===============================
+   BOOK LIST CONTAINER
+   =============================== */
+.book-list {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ===============================
+   BOOK CARD
+   =============================== */
+.book-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: transform 0.3s ease;
+  display: grid;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===============================
+   BOOK COVER IMAGE
+   =============================== */
+.book-cover img {
+  width: 75px;
+  height: 105px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ===============================
+   BOOK INFO TEXT
+   =============================== */
+.book-info {
+  flex: 1;
+}
+
+.book-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.book-info p {
+  margin: 3px 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* STATUS COLORS */
+.status.available {
+  color: green;
+  font-weight: 600;
+}
+
+.status.issued {
+  color: red;
+  font-weight: 600;
+}
+
+/* ===============================
+   ACTION BUTTONS
+   =============================== */
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.book-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.25s ease;
+}
+
+/* Button styles */
+.btn-issue {
+  background: #3b82f6;
+  color: white;
+}
+.btn-issue:hover {
+  background: #1d4ed8;
+}
+
+.btn-issued {
+  background: #6b7280;
+  color: white;
+  cursor: not-allowed;
+}
+
+.btn-edit {
+  background: #e5e7eb;
+}
+.btn-edit:hover {
+  background: #d1d5db;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #ef4444;
+}
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* 📌 < 300px (Smallest Devices) */
+@media (max-width: 300px) {
+  .book-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-cover img {
+    width: 60px;
+    height: 90px;
+  }
+
+  .book-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* 📌 300px - 480px (Small Phones) */
+@media (max-width: 480px) {
+  .book-cover img {
+    width: 65px;
+    height: 95px;
+  }
+
+  .book-card {
+    padding: 12px;
+    width: 280px;
+  }
+}
+
+/* 📌 481px - 768px (Tablets) */
+@media (max-width: 768px) {
+  .books-page {
+    padding: 15px;
+  }
+}
+
+/* 📌 769px - 1024px (Small Laptops) */
+@media (max-width: 1024px) {
+  .book-info h3 {
+    font-size: 1rem;
+  }
+}
+
+/* 📌 > 1280px (Large Screens) */
+@media (min-width: 1280px) {
+  .book-card {
+    padding: 20px;
+  }
+
+  .book-cover img {
+    width: 90px;
+    height: 130px;
+  }
+
+  .book-info h3 {
+    font-size: 1.25rem;
+  }
+}

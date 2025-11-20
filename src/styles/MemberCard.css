@@ -1,0 +1,134 @@
+/* =========================================
+   MEMBER CARD STYLE
+========================================= */
+
+.member-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.member-card:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* MEMBER INFO */
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.member-details {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.member-details .dot {
+  margin: 0 4px;
+  opacity: 0.6;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.remove-btn:hover {
+  background: #b91c1c;
+}
+
+/* =========================================
+   RESPONSIVE BEHAVIOR
+========================================= */
+
+/* ≥1280px (Large Desktop) */
+@media (min-width: 1280px) {
+  .member-card {
+    padding: 18px 22px;
+  }
+  .member-name {
+    font-size: 1.25rem;
+  }
+}
+
+/* 768px–1024px (Tablets) */
+@media (max-width: 1024px) {
+  .member-card {
+    padding: 16px;
+  }
+}
+
+/* 600px–768px (Small Tablets / Large Phones) */
+@media (max-width: 768px) {
+  .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .remove-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 400px–600px (Phones) */
+@media (max-width: 600px) {
+  .member-name {
+    font-size: 1.05rem;
+  }
+  .member-details {
+    font-size: 0.9rem;
+  }
+  .remove-btn {
+    padding: 9px;
+  }
+}
+
+/* ≤350px (Very Small Devices) */
+@media (max-width: 350px) {
+  .member-card {
+    padding: 12px;
+  }
+  .member-name {
+    font-size: 1rem;
+  }
+  .remove-btn {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+}
+
+/* ≤300px (Tiny screens / Smart watches / Embedded) */
+@media (max-width: 300px) {
+  .member-card {
+    padding: 10px;
+  }
+  .member-details {
+    font-size: 0.8rem;
+  }
+  .remove-btn {
+    padding: 7px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}

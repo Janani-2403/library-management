@@ -1,0 +1,154 @@
+/* =======================
+   SIDEBAR BASE DESIGN
+   ======================= */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #1b4332;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1000;
+  
+  /* START HIDDEN */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 👇 THIS MUST BE BELOW THE ABOVE RULE */
+.sidebar.open {
+  transform: translateX(0) !important;
+}
+
+/* Title */
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
+  font-weight: 600;
+}
+
+/* Navigation Links */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar nav a {
+  color: #e6fff3;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+.sidebar nav a:hover {
+  background: #40916c;
+}
+
+.sidebar nav a.active {
+  background: #52b788;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* =======================
+   RESPONSIVE LOGIC
+   ======================= */
+
+/* Sidebar always open on laptop/desktop */
+@media (min-width: 1025px) {
+  .sidebar {
+    transform: translateX(0) !important;
+  }
+}
+
+
+/* Hide sidebar on tablets and mobile */
+/* @media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  } */
+
+  /* Overlay behind sidebar when open */
+  /* .sidebar-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 900;
+  }
+} */
+
+/* Medium Tablets */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 210px;
+  }
+  .sidebar h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 190px;
+    padding: 1.2rem 0.8rem;
+  }
+  .sidebar nav a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 360px) {
+  .sidebar {
+    width: 165px;
+  }
+  .sidebar h2 {
+    font-size: 1rem;
+  }
+  .sidebar nav a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+}
+
+/* Ultra Small Screens */
+@media (max-width: 300px) {
+  .sidebar {
+    width: 150px;
+  }
+  .sidebar nav a {
+    font-size: 0.75rem;
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  z-index: 900; /* sidebar is 1000, so overlay is under it */
+}
